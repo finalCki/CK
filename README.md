@@ -1,18 +1,33 @@
 # preprocess.py: a portable multi-language file preprocessor
 
 Download the latest preprocess.py packages from
-https://github.com/hplgit/preprocess.git.
+https://github.com/doconce/preprocess.git.
 
-|                 |                                          |
-| --------------- | ---------------------------------------- |
-| Home            | https://github.com/hplgit/preprocess.git |
-| License         | MIT (see `LICENSE.txt`)                  |
-| Platforms       | Windows, Linux, Mac OS X, Unix           |
-| Current Version | 1.2.2                                    |
-| Dev Status      | Fairly mature                            |
-| Requirements    | Python >= 2.7 or Python >= 3.4           |
+|                 |                                           |
+| --------------- | ----------------------------------------- |
+| Home            | https://github.com/doconce/preprocess.git |
+| License         | MIT (see `LICENSE.txt`)                   |
+| Platforms       | Windows, Linux, Mac OS X, Unix            |
+| Current Version | 1.2.3                                     |
+| Dev Status      | Fairly mature                             |
+| Requirements    | Python >= 2.7 or Python >= 3.4            |
 | Dependencies    | [python-future](http://python-future.org) |
-| Author          | Trent Mick                               |
+| Author          | Trent Mick                                |
+
+## Install Notes
+
+Preprocess can be installed via pip.
+```
+pip install https://github.com/doconce/preprocess/archive/master.zip
+```
+
+There's also a conda package on the conda-forge channel. To enable the conda-forge channel and install preprocess, run
+```
+conda config --add channels conda-forge
+conda install preprocess
+```
+### Dependencies
+`preprocess.py` version 1.2 depends on [python-future](http://python-future.org). This dependency is handled automatically by pip and conda.
 
 ## Why preprocess.py?
 
@@ -149,48 +164,6 @@ Run `pydoc preprocess` to see more explanation.
 As well, preprocess can do in-line substitution of defined variables.
 Although this is currently off by default because substitution will occur
 in program strings (and actually anywhere), which is not ideal.
-
-Please send any feedback to the original author
-[Trent Mick](mailto:trentm@google.com) or the current maintainer
-[Hans Petter Langtangen](mailto:hpl@simula.no).
-
-
-
-## Install Notes
-
-Download the latest `preprocess` zip source package, unzip it, and run `python
-setup.py install`:
-```
-    unzip master.zip
-    cd preprocess
-    python setup.py install
-```
-Note that `preprocess.py` version 1.2 depends on [python-future](http://python-future.org). If you have `pip` installed, `python-future` is easily installed by
-
-```
-    pip install future
-```
-
-The `setup.py` command will install `preprocess.py` into your Python
-`site-packages` and also into your Python bin directory. If you can
-now run `preprocess` and get a response then you are good to go,
-otherwise read on.
-
-The *problem* is that the Python `bin` directory is not always on your
-`PATH` on some operating systems - notably Mac OS X. To finish the
-install on OS X either manually move 'preprocess' to somewhere on your
-`PATH`:
-```
-    cp preprocess.py /usr/local/bin/preprocess
-```
-or create a symlink to it (try one of these depending on your Python
-version):
-```
-    ln -s /System/Library/Frameworks/Python.framework/Versions/2.3/bin/preprocess /usr/local/bin/preprocess
-    ln -s /Library/Frameworks/Python.framework/Versions/2.4/bin/preprocess /usr/local/bin/preprocess
-```
-(Note: You'll probably need to prefix those commands with `sudo` and
-the exact paths may differ on your system.)
 
 
 ## Getting Started
@@ -511,4 +484,3 @@ Note that v1.1.0 has moved from code.google.com to github.com: https://github.co
 ### 0.1.0:
 
 - First release.
-
