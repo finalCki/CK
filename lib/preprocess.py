@@ -518,8 +518,8 @@ def preprocess(infile, outfile=sys.stdout, defines={},
                         fname = os.path.normpath(os.path.join(d, f))
                         if os.path.exists(fname):
                             break
-                        else:
-                            raise PreprocessError("could not find #include'd file "\
+                    else:
+                        raise PreprocessError("could not find #include'd file "\
                                                   "\"%s\" on include path: %r"\
                                                   % (f, includePath))
                     if fromto is not None:
