@@ -8,7 +8,7 @@ https://github.com/doconce/preprocess.git.
 | Home            | https://github.com/doconce/preprocess.git |
 | License         | MIT (see `LICENSE.txt`)                   |
 | Platforms       | Windows, Linux, Mac OS X, Unix            |
-| Current Version | 1.2.3                                     |
+| Current Version | 2.0.0                                     |
 | Dev Status      | Fairly mature                             |
 | Requirements    | Python >= 2.7 or Python >= 3.4            |
 | Dependencies    | [python-future](http://python-future.org) |
@@ -16,7 +16,13 @@ https://github.com/doconce/preprocess.git.
 
 ## Install Notes
 
-Preprocess can be installed via pip.
+Preprocess can be installed via pip:
+```
+pip install preprocess
+```
+
+or with the following:
+
 ```
 pip install https://github.com/doconce/preprocess/archive/master.zip
 ```
@@ -287,6 +293,11 @@ And, for module usage, read the preprocess.preprocess() docstring:
 ```
 
 ## Change Log
+
+### v2.0.0
+
+Updated [preprocess on PyPi](https://pypi.org/project/preprocess/). The aim is to make it easier to install preprocess as a dependency of [DocOnce](https://github.com/doconce/doconce).
+(By Alessandro Marin.)
 
 ### v1.2.2
 
